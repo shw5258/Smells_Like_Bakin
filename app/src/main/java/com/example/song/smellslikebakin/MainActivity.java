@@ -16,6 +16,7 @@ public class MainActivity extends AppCompatActivity implements ListFragment.OnRe
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         //TAG로 객체를 찾아서 list_fragment를 반환한다.
+        //만약 맨처음 앱을 실행시키는 상황이라면 저기 아래에 LIST_FRAGMENT 태그가 붙은 녀석을 찾을 수 없을 것이고 null을 반환한다.
         ListFragment savedFragment = (ListFragment) getSupportFragmentManager().findFragmentByTag(LIST_FRAGMENT);
         /*
         화면을 회전시킬 때에도 onCreate()가 다시 호출되므로 그때에는 Fragment를 다시
